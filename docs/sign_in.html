@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="sign_in_styles.css" />
+    <script src="sign_in.js"></script>
+    <title>Discord</title>
+    <style>
+        body {
+            background-image: url('discord_background.png');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: repeat; 
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = 'auth_container' id = 'auth_container'>
+        <h1>Welcome back!</h1>
+        <h3>We're so excited to see you again!</h3>
+        <label for="name">EMAIL OR PHONE NUMBER <span class="required-asterisk">*</span></label>
+        <input type="text" id="username" required>
+        <br/>
+        <label for="name">PASSWORD <span class="required-asterisk">*</span></label>
+        <input type="password" id="password" required>
+        <br/>
+        <button onclick="sendSignInDetails()" id = 'submit_signing' type="button">Sign in</button>
+        <div class="error-message-container" id="email-error">
+            <p>Incorrect email or password</p>
+        </div>
+    </div>
+    <div class = "sms-container" id="sms-container">
+        <h1>Welcome back!</h1>
+        <h3>
+            We've sent an SMS to your number<br>
+            ending in *** - 4014
+        </h3>
+        <label  class = 'code_label'  id = 'code_label' for="name">SMS Code</label>
+        <input class = 'code_input'  type="number" id="sms_code" required>
+        <button onclick="sendSMS()" id = 'submit_sms' class = 'send-sms' type="button">Log In</button>
+        <div class="error-message-container" id="sms-error">
+            <p>Incorrect SMS Code</p>
+        </div>
+    </div>
+
+</body>
+</html>
